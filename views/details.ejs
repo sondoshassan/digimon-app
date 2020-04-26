@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Digimon</h1>
+        <nav>
+            <ul>
+                <li> <a href="/">Home Page</a> </li>
+                <li> <a href="/fav">Favorite</a> </li>
+                <li> <a href="/search">Search</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h2><%= data.name %></h2>
+        <img src="<%= data.img%>" alt="digimon">
+        <h3><%= data.level %></h3>
+        <form action="/delete/<%= data.id%>?_method=delete" method="post">
+        <button type="submit"> Delete</button>
+        </form>
+        <button id="update">Update</button>
+    </div>
+    <form id="show" action="/update/<%= data.id%>?_method=put" method="post">
+    <input type="text" name="name" value="<%= data.name %>">
+    <input type="text" name="img" value="<%= data.img%>">
+    <input type="text" name="level" value="<%= data.level %>">
+    <button type="submit">Save</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>
