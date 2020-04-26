@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favorite page</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/header.css">
+
 </head>
 <body>
-    <header>
-        <h1>Digimon</h1>
-        <nav>
-            <ul>
-                <li> <a href="/">Home Page</a> </li>
-                <li> <a href="/fav">Favorite</a> </li>
-                <li> <a href="/search">Search</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('header') %>
     <div id="cont">
         <% data.forEach(val =>{%>
             <div>
