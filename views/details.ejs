@@ -10,16 +10,19 @@
 </head>
 <body>
     <%- include('header') %>
-
-    <div>
-        <h2><%= data.name %></h2>
-        <img src="<%= data.img%>" alt="digimon">
-        <h3><%= data.level %></h3>
-        <form action="/delete/<%= data.id%>?_method=delete" method="post">
-        <button type="submit"> Delete</button>
-        </form>
-        <button id="update">Update</button>
+    <div id="cont">
+        <div>
+            <h2><%= data.name %></h2>
+            <img src="<%= data.img%>" alt="digimon">
+            <h3><%= data.level %></h3>
+            <form action="/delete/<%= data.id%>?_method=delete" method="post">
+            <button type="submit"> Delete</button>
+            </form>
+            <button id="update">Update</button>
+        </div>
     </div>
+
+    
     <form id="show" action="/update/<%= data.id%>?_method=put" method="post">
     <input type="text" name="name" value="<%= data.name %>">
     <input type="text" name="img" value="<%= data.img%>">
