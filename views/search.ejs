@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/header.css">
+
 </head>
 <body>
    
-    <header>
-        <h1>Digimon</h1>
-        <nav>
-            <ul>
-                <li> <a href="/">Home Page</a> </li>
-                <li> <a href="/fav">Favorite</a> </li>
-                <li> <a href="/search">Search</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('header') %>
     <form action="/result" method="post">
     <input type="text" name="title">
     <label> <input type="radio" name="choose" value="name">name </label>

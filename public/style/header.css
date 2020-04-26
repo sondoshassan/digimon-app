@@ -7,11 +7,17 @@ h1 {
     font-weight: bold;
     text-transform: capitalize;
     float: left;
+    margin: 0;
 }
-nav ul{
+nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
+    list-style: none;
+}
+nav ul li{
+        margin-right: 4%;
+   
 }
 nav ul li a{
     text-decoration: none;
