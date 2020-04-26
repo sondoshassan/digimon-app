@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS digimon;
+
+CREATE TABLE IF NOT EXISTS digimon(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    img VARCHAR(500),
+    level VARCHAR(255)
+);
