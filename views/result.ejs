@@ -10,8 +10,8 @@
 </head>
 <body>
   <%- include('header') %>
-
-    <% data.forEach(val =>{%>
+<div id="cont">
+    <% data.forEach((val,id) =>{%>
         <div>
             <h2><%= val.name %></h2>
             <img src="<%= val.img%>" alt="digimon">
@@ -19,6 +19,6 @@
         </div>
 
     <% })%>
-    
+</div>
 </body>
 </html>
